@@ -239,10 +239,12 @@ text-decoration-line: underline;
     margin-left: 100px;
     margin-right: 100px;
     gap: 10px;
+    flex-wrap: wrap;
 }
 .section_3_body{
     border: 1px solid black;
-    width: 25%;
+    width: 24%;
+    overflow: hidden;
   
 }
 .section_3_body_img{
@@ -354,8 +356,7 @@ border: 1px solid #C17A46;
         margin-left: 100px;
         margin-right: 100px;
         margin-top: 20px;
-        background-image: url('https://s3-alpha-sig.figma.com/img/e6a9/ff0a/bfe597e3ef0fe641cf827efc9e3be23c?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iakVdCscD0mTNjDaLzI~HyIqdv73-is4AjL-EjT2nMPUICxhfCSYlfsjCz-oeXAdT49VhEwvAZ1nEfFdwWDIQFlY96pn7aeyPTHjs3rtVHY-n416XQ5WbeZApPohdStMied15nrySKKrIv6Tb0fCRpNQx~Sf9~Nr0KObodB7V8Zdc~nv01kdqm4QRncQiUd0QhdKVEj6MiCdgi~oTPpy-t89MGhnNxj3zQhp~drfJItXDwiyUzW3NKF0AIQ0GdbsABb7P3YmshziQwLOQ1SmV96q8OZsN47EKoTkkmD~b-Kx4peq6vwUAPzZiHfSm8V7Z5qyFDq32CONFwQamxwGxA__');
-        /* background-image: url('..\Library\public\imges\bfe597e3ef0fe641cf827efc9e3be23c.jpeg'); */
+        background-image: url('/imges/bfe597e3ef0fe641cf827efc9e3be23c.jpeg');        /* background-image: url('..\Library\public\imges\bfe597e3ef0fe641cf827efc9e3be23c.jpeg'); */
        background-size: cover;
        background-repeat: no-repeat;
        
@@ -537,11 +538,13 @@ border: 1px solid #C17A46;
         margin-left: 100px;
         margin-right: 100px;
         gap: 10px;
+        flex-wrap: wrap;
     }
     .section_3_body{
         border: 1px solid black;
-        width: 25%;
-      
+        width: 24%;
+        overflow: hidden;
+  
     }
     .section_3_body_img{
         text-align: center;
@@ -549,6 +552,7 @@ border: 1px solid #C17A46;
     }
     .section_3_body_img img{
        width: 180px;
+       height: 200px;
       
     }
     .section_3_body_information button{
@@ -638,8 +642,7 @@ background-color: #C17A46;
         margin-left: 100px;
         margin-right: 100px;
         margin-top: 20px;
-        background-image: url('https://s3-alpha-sig.figma.com/img/e6a9/ff0a/bfe597e3ef0fe641cf827efc9e3be23c?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iakVdCscD0mTNjDaLzI~HyIqdv73-is4AjL-EjT2nMPUICxhfCSYlfsjCz-oeXAdT49VhEwvAZ1nEfFdwWDIQFlY96pn7aeyPTHjs3rtVHY-n416XQ5WbeZApPohdStMied15nrySKKrIv6Tb0fCRpNQx~Sf9~Nr0KObodB7V8Zdc~nv01kdqm4QRncQiUd0QhdKVEj6MiCdgi~oTPpy-t89MGhnNxj3zQhp~drfJItXDwiyUzW3NKF0AIQ0GdbsABb7P3YmshziQwLOQ1SmV96q8OZsN47EKoTkkmD~b-Kx4peq6vwUAPzZiHfSm8V7Z5qyFDq32CONFwQamxwGxA__');
-        /* background-image: url('..\Library\public\imges\bfe597e3ef0fe641cf827efc9e3be23c.jpeg'); */
+        background-image: url('/imges/bfe597e3ef0fe641cf827efc9e3be23c.jpeg');        /* background-image: url('..\Library\public\imges\bfe597e3ef0fe641cf827efc9e3be23c.jpeg'); */
        background-size: cover;
        background-repeat: no-repeat;
        
@@ -855,7 +858,8 @@ background-color: #5A2006;
 
     }
     .section_3_body_img img{
-        width: 80px;
+        width: 60px;
+        height: 120px;
     }
     .section_3_body_information{
         padding-left: 10px;
@@ -961,8 +965,7 @@ border: 1px solid #5A2006;
             margin-left: 6px;
             margin-right: 6px;
             margin-top: 20px;
-            background-image: url('https://s3-alpha-sig.figma.com/img/e6a9/ff0a/bfe597e3ef0fe641cf827efc9e3be23c?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iakVdCscD0mTNjDaLzI~HyIqdv73-is4AjL-EjT2nMPUICxhfCSYlfsjCz-oeXAdT49VhEwvAZ1nEfFdwWDIQFlY96pn7aeyPTHjs3rtVHY-n416XQ5WbeZApPohdStMied15nrySKKrIv6Tb0fCRpNQx~Sf9~Nr0KObodB7V8Zdc~nv01kdqm4QRncQiUd0QhdKVEj6MiCdgi~oTPpy-t89MGhnNxj3zQhp~drfJItXDwiyUzW3NKF0AIQ0GdbsABb7P3YmshziQwLOQ1SmV96q8OZsN47EKoTkkmD~b-Kx4peq6vwUAPzZiHfSm8V7Z5qyFDq32CONFwQamxwGxA__');
-            /* background-image: url('..\Library\public\imges\bfe597e3ef0fe641cf827efc9e3be23c.jpeg'); */
+            background-image: url('/imges/bfe597e3ef0fe641cf827efc9e3be23c.jpeg');            /* background-image: url('..\Library\public\imges\bfe597e3ef0fe641cf827efc9e3be23c.jpeg'); */
            background-size: cover;
            background-repeat: no-repeat;
            
@@ -1150,7 +1153,8 @@ border: 1px solid #5A2006;
             
                 }
                 .section_3_body_img img{
-                    width: 80px;
+                    width: 60px;
+                    height: 120px;
                 }
                 .section_3_body_information{
                     padding-left: 10px;

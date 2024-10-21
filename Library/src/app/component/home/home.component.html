@@ -5,7 +5,7 @@
 
 <!-- <button>Category</button> -->
 <select id="options" name="options">
-  <option value="option1">Catrgory</option>
+  <option value="option1" ><a href="#first">Recommendations</a></option>
   <option value="option2">الخيار 2</option>
   <option value="option3">الخيار 3</option>
   <option value="option4">الخيار 4</option>
@@ -96,277 +96,173 @@
 </div>
 
 <div class="header_section_3">
-<h4>
+<h4 id="first">
   Recommendations
 </h4>
-<a href="#">View More</a>
+<a href="#ali" (click)="toggleShowMore()">View More</a>
 </div>
-<div class="section_3">
-   <div class="section_3_body" >
-<div class="section_3_body_img">
-<img src="image (1).png">
-</div>
-<div class="section_3_body_information">
-  <h4>The Lord Of The Rings</h4> 
-  <p>J.R.R. Tolkien</p>
-  <img src="star-empty.svg">
-  <img src="star-empty.svg">
-  <img src="star-empty.svg">
-  <img src="star-empty.svg">
-  <img src="star-empty.svg">
-  <button>avilable</button>
-</div>
+<div class="section_3" id="ali">
+   <div class="section_3_body" *ngFor="let x of books.slice(0, 4)" >
+      <div class="section_3_body_img">
+         <img [src]="x.img">
+      </div>
+      <div class="section_3_body_information">
+         <h4>{{x.name}}</h4> 
+         <p>{{x.author}}</p>
+         <img src="star-empty.svg">
+         <img src="star-empty.svg">
+         <img src="star-empty.svg">
+         <img src="star-empty.svg">
+         <img src="star-empty.svg">
+         <button>Available</button>
+      </div>
    </div>
-   <div class="section_3_body" >
-    <div class="section_3_body_img">
-    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794">
-    </div>
-    <div class="section_3_body_information">
-      <h4>The Lord Of The Rings</h4> 
-      <p>J.R.R. Tolkien</p>
-      <img src="star-empty.svg">
-      <img src="star-empty.svg">
-      <img src="star-empty.svg">
-      <img src="star-empty.svg">
-      <img src="star-empty.svg">
-      <button>avilable</button>
-    </div>
-       </div>
-       <div class="section_3_body" >
-        <div class="section_3_body_img">
-        <img src="image (1).png">
-        </div>
-        <div class="section_3_body_information">
-          <h4>The Lord Of The Rings</h4> 
-          <p>J.R.R. Tolkien</p>
-          <img src="star-empty.svg">
-          <img src="star-empty.svg">
-          <img src="star-empty.svg">
-          <img src="star-empty.svg">
-          <img src="star-empty.svg">
-          <button>avilable</button>
-        </div>
-           </div>
-           <div class="section_3_body" >
-            <div class="section_3_body_img">
-            <img src="image (1).png">
-            </div>
-            <div class="section_3_body_information">
-              <h4>The Lord Of The Rings</h4> 
-              <p>J.R.R. Tolkien</p>
-              <img src="star-empty.svg">
-              <img src="star-empty.svg">
-              <img src="star-empty.svg">
-              <img src="star-empty.svg">
-              <img src="star-empty.svg">
-              <button>avilable</button>
-            </div>
-               </div>
+
+   <!-- كتب إضافية -->
+   <ng-container *ngIf="showMore">
+      <div class="section_3_body"  *ngFor="let x of books.slice(4, 8)">
+         <div class="section_3_body_img">
+            <img [src]="x.img">
+         </div>
+         <div class="section_3_body_information">
+            <h4>{{x.name}}</h4> 
+            <p>{{x.author}}</p>
+            <img src="star-empty.svg">
+            <img src="star-empty.svg">
+            <img src="star-empty.svg">
+            <img src="star-empty.svg">
+            <img src="star-empty.svg">
+            <button>Available</button>
+         </div>
+      </div>
+   </ng-container>
 </div>
 <div class="header_section_3">
   <h4>
     Trending Books
   </h4>
-  <a href="#">View More</a>
-  </div>
-  <div class="section_3">
-     <div class="section_3_body" >
-  <div class="section_3_body_img">
-  <img src="image (1).png">
-  </div>
-  <div class="section_3_body_information">
-    <h4>The Lord Of The Rings</h4> 
-    <p>J.R.R. Tolkien</p>
-    <img src="star-empty.svg">
-    <img src="star-empty.svg">
-    <img src="star-empty.svg">
-    <img src="star-empty.svg">
-    <img src="star-empty.svg">
-    <button>avilable</button>
-  </div>
-     </div>
-     <div class="section_3_body" >
+  <a href="#alii" (click)="toggleShowMoree()">View More</a>
+</div>
+<div class="section_3" >
+   <div class="section_3_body" *ngFor="let x of treadeingbooks.slice(0, 4)" >
       <div class="section_3_body_img">
-      <img src="image (1).png">
+         <img [src]="x.img">
       </div>
       <div class="section_3_body_information">
-        <h4>The Lord Of The Rings</h4> 
-        <p>J.R.R. Tolkien</p>
-        <img src="star-empty.svg">
-        <img src="star-empty.svg">
-        <img src="star-empty.svg">
-        <img src="star-empty.svg">
-        <img src="star-empty.svg">
-        <button>avilable</button>
+         <h4>{{x.name}}</h4> 
+         <p>{{x.author}}</p>
+         <img src="star-empty.svg">
+         <img src="star-empty.svg">
+         <img src="star-empty.svg">
+         <img src="star-empty.svg">
+         <img src="star-empty.svg">
+         <button>Available</button>
       </div>
+   </div>
+
+   <!-- كتب إضافية -->
+   <ng-container *ngIf="showMoree">
+      <div id="alii" class="section_3_body"  *ngFor="let x of treadeingbooks.slice(4, 8)">
+         <div class="section_3_body_img">
+            <img [src]="x.img">
          </div>
-         <div class="section_3_body" >
-          <div class="section_3_body_img">
-          <img src="image (1).png">
-          </div>
-          <div class="section_3_body_information">
-            <h4>The Lord Of The Rings</h4> 
-            <p>J.R.R. Tolkien</p>
+         <div class="section_3_body_information">
+            <h4>{{x.name}}</h4> 
+            <p>{{x.author}}</p>
             <img src="star-empty.svg">
             <img src="star-empty.svg">
             <img src="star-empty.svg">
             <img src="star-empty.svg">
             <img src="star-empty.svg">
-            <button>avilable</button>
-          </div>
-             </div>
-             <div class="section_3_body" >
-              <div class="section_3_body_img">
-              <img src="image (1).png">
-              </div>
-              <div class="section_3_body_information">
-                <h4>The Lord Of The Rings</h4> 
-                <p>J.R.R. Tolkien</p>
-                <img src="star-empty.svg">
-                <img src="star-empty.svg">
-                <img src="star-empty.svg">
-                <img src="star-empty.svg">
-                <img src="star-empty.svg">
-                <button>avilable</button>
-              </div>
-                 </div>
-  </div>
+            <button>Available</button>
+         </div>
+      </div>
+   </ng-container>
+</div>
   <div class="header_section_3">
     <h4>
       Classic Books
     </h4>
-    <a href="#">View More</a>
-    </div>
-    <div class="section_3">
-       <div class="section_3_body" >
-    <div class="section_3_body_img">
-    <img src="image (1).png">
-    </div>
-    <div class="section_3_body_information">
-      <h4>The Lord Of The Rings</h4> 
-      <p>J.R.R. Tolkien</p>
-      <img src="star-empty.svg">
-      <img src="star-empty.svg">
-      <img src="star-empty.svg">
-      <img src="star-empty.svg">
-      <img src="star-empty.svg">
-      <button>avilable</button>
-    </div>
-       </div>
-       <div class="section_3_body" >
+    <a href="#alii" (click)="toggleShowMoreee()">View More</a>
+  </div>
+  <div class="section_3" >
+     <div class="section_3_body" *ngFor="let x of Classic.slice(0, 4)" >
         <div class="section_3_body_img">
-        <img src="image (1).png">
+           <img [src]="x.img">
         </div>
         <div class="section_3_body_information">
-          <h4>The Lord Of The Rings</h4> 
-          <p>J.R.R. Tolkien</p>
-          <img src="star-empty.svg">
-          <img src="star-empty.svg">
-          <img src="star-empty.svg">
-          <img src="star-empty.svg">
-          <img src="star-empty.svg">
-          <button>avilable</button>
+           <h4>{{x.name}}</h4> 
+           <p>{{x.author}}</p>
+           <img src="star-empty.svg">
+           <img src="star-empty.svg">
+           <img src="star-empty.svg">
+           <img src="star-empty.svg">
+           <img src="star-empty.svg">
+           <button>Available</button>
         </div>
+     </div>
+  
+     <!-- كتب إضافية -->
+     <ng-container *ngIf="showMoreee">
+        <div id="alii" class="section_3_body"  *ngFor="let x of Classic.slice(4, 8)">
+           <div class="section_3_body_img">
+              <img [src]="x.img">
            </div>
-           <div class="section_3_body" >
-            <div class="section_3_body_img">
-            <img src="image (1).png">
-            </div>
-            <div class="section_3_body_information">
-              <h4>The Lord Of The Rings</h4> 
-              <p>J.R.R. Tolkien</p>
+           <div class="section_3_body_information">
+              <h4>{{x.name}}</h4> 
+              <p>{{x.author}}</p>
               <img src="star-empty.svg">
               <img src="star-empty.svg">
               <img src="star-empty.svg">
               <img src="star-empty.svg">
               <img src="star-empty.svg">
-              <button>avilable</button>
-            </div>
-               </div>
-               <div class="section_3_body" >
-                <div class="section_3_body_img">
-                <img src="image (1).png">
-                </div>
-                <div class="section_3_body_information">
-                  <h4>The Lord Of The Rings</h4> 
-                  <p>J.R.R. Tolkien</p>
-                  <img src="star-empty.svg">
-                  <img src="star-empty.svg">
-                  <img src="star-empty.svg">
-                  <img src="star-empty.svg">
-                  <img src="star-empty.svg">
-                  <button>avilable</button>
-                </div>
-                   </div>
-    </div>
+              <button>Available</button>
+           </div>
+        </div>
+     </ng-container>
+  </div>
     <div class="header_section_3">
       <h4>
         Romance
       </h4>
-      <a href="#">View More</a>
-      </div>
-      <div class="section_3">
-         <div class="section_3_body" >
-      <div class="section_3_body_img">
-      <img src="image (1).png">
-      </div>
-      <div class="section_3_body_information">
-        <h4>The Lord Of The Rings</h4> 
-        <p>J.R.R. Tolkien</p>
-        <img src="star-empty.svg">
-        <img src="star-empty.svg">
-        <img src="star-empty.svg">
-        <img src="star-empty.svg">
-        <img src="star-empty.svg">
-        <button>avilable</button>
-      </div>
-         </div>
-         <div class="section_3_body" >
+      <a href="#alii" (click)="toggleShowMoreeee()">View More</a>
+    </div>
+    <div class="section_3" >
+       <div class="section_3_body" *ngFor="let x of Romance.slice(0, 4)" >
           <div class="section_3_body_img">
-          <img src="image (1).png">
+             <img [src]="x.img">
           </div>
           <div class="section_3_body_information">
-            <h4>The Lord Of The Rings</h4> 
-            <p>J.R.R. Tolkien</p>
-            <img src="star-empty.svg">
-            <img src="star-empty.svg">
-            <img src="star-empty.svg">
-            <img src="star-empty.svg">
-            <img src="star-empty.svg">
-            <button>avilable</button>
+             <h4>{{x.name}}</h4> 
+             <p>{{x.author}}</p>
+             <img src="star-empty.svg">
+             <img src="star-empty.svg">
+             <img src="star-empty.svg">
+             <img src="star-empty.svg">
+             <img src="star-empty.svg">
+             <button>Available</button>
           </div>
+       </div>
+    
+       <!-- كتب إضافية -->
+       <ng-container *ngIf="showMoreeee">
+          <div id="alii" class="section_3_body"  *ngFor="let x of Romance.slice(4, 8)">
+             <div class="section_3_body_img">
+                <img [src]="x.img">
              </div>
-             <div class="section_3_body" >
-              <div class="section_3_body_img">
-              <img src="image (1).png">
-              </div>
-              <div class="section_3_body_information">
-                <h4>The Lord Of The Rings</h4> 
-                <p>J.R.R. Tolkien</p>
+             <div class="section_3_body_information">
+                <h4>{{x.name}}</h4> 
+                <p>{{x.author}}</p>
                 <img src="star-empty.svg">
                 <img src="star-empty.svg">
                 <img src="star-empty.svg">
                 <img src="star-empty.svg">
                 <img src="star-empty.svg">
-                <button>avilable</button>
-              </div>
-                 </div>
-                 <div class="section_3_body" >
-                  <div class="section_3_body_img">
-                  <img src="image (1).png">
-                  </div>
-                  <div class="section_3_body_information">
-                    <h4>The Lord Of The Rings</h4> 
-                    <p>J.R.R. Tolkien</p>
-                    <img src="star-empty.svg">
-                    <img src="star-empty.svg">
-                    <img src="star-empty.svg">
-                    <img src="star-empty.svg">
-                    <img src="star-empty.svg">
-                    <button>avilable</button>
-                  </div>
-                     </div>
-      </div>
+                <button>Available</button>
+             </div>
+          </div>
+       </ng-container>
+    </div>
   
 
     
